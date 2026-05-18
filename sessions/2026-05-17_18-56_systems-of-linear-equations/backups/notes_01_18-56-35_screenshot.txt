@@ -1,0 +1,79 @@
+Screenshot #1 at 18-56-35
+==================================================
+
+## Topic
+Systems of Linear Equations (Row Operations / Elementary Matrices)
+
+## Given Problem
+**Week 1 Sections 1.2 1.3 and 1.4: Problem 5**
+
+Solve the system using row operations (or elementary matrices).
+
+$$\begin{cases}
+6x + 3y - 3z = 9 \\
+6x + 4y - 4z = 0 \\
+4x + 3y + 6z = 37
+\end{cases}$$
+
+## Augmented Matrix
+
+$$\left[\begin{array}{ccc|c}
+6 & 3 & -3 & 9 \\
+6 & 4 & -4 & 0 \\
+4 & 3 & 6 & 37
+\end{array}\right]$$
+
+## Solution
+
+**Row Operation:** $R_2 - R_1 \to R_2$
+
+$$\left[\begin{array}{ccc|c}
+6 & 3 & -3 & 9 \\
+0 & 1 & -1 & -9 \\
+4 & 3 & 6 & 37
+\end{array}\right]$$
+
+**Row Operation:** $3R_3 - 2R_1 \to R_3$
+
+$$3R_3 - 2R_1: [12, 9, 18, 111] - [12, 6, -6, 18] = [0, 3, 24, 93]$$
+
+$$\left[\begin{array}{ccc|c}
+6 & 3 & -3 & 9 \\
+0 & 1 & -1 & -9 \\
+0 & 3 & 24 & 93
+\end{array}\right]$$
+
+**Row Operation:** $R_3 - 3R_2 \to R_3$
+
+$$\left[\begin{array}{ccc|c}
+6 & 3 & -3 & 9 \\
+0 & 1 & -1 & -9 \\
+0 & 0 & 27 & 120
+\end{array}\right]$$
+
+**Back-substitution:**
+
+From row 3: $27z = 120$
+$$z = \frac{120}{27} = \frac{40}{9}$$
+
+From row 2: $y - z = -9$
+$$y = -9 + \frac{40}{9} = \frac{-81 + 40}{9} = \frac{-41}{9}$$
+
+From row 1: $6x + 3y - 3z = 9$
+$$6x = 9 - 3y + 3z = 9 - 3\left(\frac{-41}{9}\right) + 3\left(\frac{40}{9}\right)$$
+$$6x = 9 + \frac{123}{9} + \frac{120}{9} = \frac{81 + 123 + 120}{9} = \frac{324}{9} = 36$$
+$$x = 6$$
+
+## Final Answer
+
+$$x = 6, \quad y = \frac{-41}{9}, \quad z = \frac{40}{9}$$
+
+## Verification
+
+Substitute into the original equations:
+
+**Equation 1:** $6(6) + 3\left(\frac{-41}{9}\right) - 3\left(\frac{40}{9}\right) = 36 - \frac{123}{9} - \frac{120}{9} = 36 - 27 = 9$ ✓
+
+**Equation 2:** $6(6) + 4\left(\frac{-41}{9}\right) - 4\left(\frac{40}{9}\right) = 36 - \frac{164}{9} - \frac{160}{9} = 36 - 36 = 0$ ✓
+
+**Equation 3:** $4(6) + 3\left(\frac{-41}{9}\right) + 6\left(\frac{40}{9}\right) = 24 - \frac{123}{9} + \frac{240}{9} = 24 + 13 = 37$ ✓
