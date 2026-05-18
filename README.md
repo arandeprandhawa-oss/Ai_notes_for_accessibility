@@ -54,18 +54,7 @@ LectureLens/
   requirements.txt
   .gitignore
 
-Do Not Upload
-Do not upload these files or folders to GitHub:
-- config.txt
-- dist/
-- build/
-- sessions/
-- fonts/
-- *.exe
-- *.pkg
-- *.spec
-- __pycache__/
-- *.pyc
+
 
 Requirements
 The main Python packages used by LectureLens are:
